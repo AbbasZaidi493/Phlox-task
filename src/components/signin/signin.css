@@ -83,6 +83,7 @@
   }
 .form-input {
     height: 25px;
+    width: 100%;
     margin-top: 5px;
     border-color: transparent;
 }
@@ -122,7 +123,7 @@
        margin-left: 80px;     
     }
   }
-  @media(max-width:1025px) {
+  @media(max-width:1025px) and  (min-width:450px) {
     .register {
        margin-left: 230px;     
     }
@@ -149,7 +150,7 @@
         
     }
   }
-  @media(max-width:1025px) {
+  @media(max-width:1025px) and  (min-width:450px) {
     .greetings {
         margin-left: 230px;
         

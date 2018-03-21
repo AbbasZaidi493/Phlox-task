@@ -103,6 +103,7 @@ class Signup extends Component {
                  id="email" placeholder="abc@gmail.com" required/>
                  {this.state.validateEmail === false ? <span className="email-validate">please enter a valid email</span>: ''}
                  <span className="password" >Password</span>
+                 <div style={{display: 'inline-flex'}}>
                  <input className="form-input" type="password" onChange={this.validatePassword} ref={(input) => { this.password = input; }} placeholder="* * * * * *" required/>
                  {this.state.passwordChange===true ?<div className="password-check">
                    <span className="contain">Password must contain</span>
@@ -119,6 +120,7 @@ class Signup extends Component {
                    <span className="checks">1 number [0-9]</span>
                    </div>
                 </div>: ''}
+                </div>
                  <button className="signin-button" onClick={this.validate} type="submit" >Create Account</button>
              </form>
            </div>

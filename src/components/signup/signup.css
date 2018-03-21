@@ -47,16 +47,14 @@
     height: 100px;
     background: white;
     display: flex;
-    -ms-flex-direction: column;
     flex-direction: column;
     position: absolute;
-    bottom: 35px;
-    left: 530px;
+    margin-left: 260px;
+    margin-top: -66px;
 }
 @media(max-width:450px) {
     .password-check {
-        top: 165px;
-        left: 270px;
+        right: 8px;
     }
   }
 .contain {
