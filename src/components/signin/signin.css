@@ -1,0 +1,181 @@
+.signin-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+@media(max-width:450px) {
+    .signin-section {
+        flex-direction: column;
+    }
+  }
+  @media(max-width:1025px) {
+    .signin-section {
+        flex-direction: column;
+    }
+  }
+.signin-form {
+    width: 50%;
+    background: aliceblue;
+}
+@media(max-width:450px) {
+    .signin-form {
+        width: 100%;
+        height: 50%;
+    }
+  }
+  @media(max-width:1025px) {
+    .signin-form {
+        width: 100%;
+        height: 50%;
+    }
+  }
+.signin-greetings {
+    width: 50%;
+    background: blue;
+}
+@media(max-width:450px) {
+    .signin-greetings {
+        width: 100%;
+        height: 50%;        
+    }
+  }
+  @media(max-width:1025px) {
+    .signin-greetings {
+        width: 100%;
+        height: 50%;        
+    }
+  }
+.logo-heading {
+    margin-top: 14px;
+}
+.logo {
+    margin-left: 268px;
+    height: 25px;
+    width: 25px;
+}
+@media(max-width:450px) {
+    .logo {
+        margin-left: 112px;
+        }
+  }
+.logo-span {
+    position: absolute;
+    top: 17px;
+    left: 290px;
+}
+@media(max-width:450px) {
+    .logo-span {
+        left: 135px;
+        }
+  }
+.form {
+    display: grid;
+    margin: 134px auto;
+    margin-left: 270px;
+    width: 250px;
+}
+@media(max-width:450px) {
+    .form {
+        margin: 25px auto;
+        margin-left: 70px;
+        
+    }
+  }
+.form-input {
+    height: 25px;
+    margin-top: 5px;
+    border-color: transparent;
+}
+.form-input::placeholder {
+    color: aqua;
+}
+.form-span {
+    font-size: 13px;
+}
+.password {
+    margin-top: 20px;
+    font-size: 13px;
+}
+.forgot {
+    color: cadetblue;
+    font-size: 12px;
+    margin-left: 160px;
+    margin-top: 8px;
+}
+.signin-button {
+    background: blue;
+    border: none;
+    height: 30px;
+    color: white;
+    margin-top: 20px;
+}
+.register-heading {
+    margin-top: 14px;
+}
+.register {
+        margin-left: 150px;
+        font-size: 12px;
+        color: palegreen;
+}
+@media(max-width:450px) {
+    .register {
+       margin-left: 80px;     
+    }
+  }
+  @media(max-width:1025px) {
+    .register {
+       margin-left: 230px;     
+    }
+  }
+.create {
+    font-size: 12px;
+    color: white;
+    margin-left: 8px;
+}
+.arrow {
+    color: white;
+    margin-left: 5px;
+}
+.greetings {
+    display: grid;
+    margin: 100px auto;
+    margin-left: 150px;
+    width: 250px;
+}
+@media(max-width:450px) {
+    .greetings {
+        margin: 25px auto;
+        margin-left: 65px;
+        
+    }
+  }
+  @media(max-width:1025px) {
+    .greetings {
+        margin-left: 230px;
+        
+    }
+  }
+.welcome-heading {
+    color: white;
+    font-weight: 100;
+}
+.greeting-para {
+    font-size: 12px;
+    color: #A9A9A9;
+    margin-top: 0px;
+}
+.eye {
+    position: absolute;
+    top: 280px;
+    left: 490px;
+    color: aqua;
+}
+@media(max-width:450px) {
+    .eye {
+        top: 168px;
+        left: 285px;
+    }
+  }
+.link-tag {
+    text-decoration: none;
+}

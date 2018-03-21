@@ -1,0 +1,34 @@
+.reset-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+@media(max-width:450px) {
+    .reset-section {
+        flex-direction: column;
+    }
+  }
+  @media(max-width:1025px) {
+    .reset-section {
+        flex-direction: column;
+    }
+  }
+.reset-form {
+    width: 50%;
+    background: aliceblue;
+}
+@media(max-width:450px) {
+    .reset-form {
+        width: 100%;
+        height: 50%;
+    }
+  }
+  @media(max-width:1025px) {
+    .reset-form {
+        width: 100%;
+        height: 50%;
+    }
+  }
+.reset-para {
+font-size: 14px;
+}
