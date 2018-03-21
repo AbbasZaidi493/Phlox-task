@@ -1,16 +1,25 @@
-Phlox-task
+# Phlox-task
 
-Signin/Signup Page with complete functionality.
+Signin/signup pages with complete functionality.
 
-Getting Started
+## Getting Started
 
+```
 git clone
+```
+
+```
 npm install
-Run the project:
+```
 
+### Run the project:
+
+```
 npm start
-It would automatically open a browser window with localhost:3000. In case it doesn't, you can visit the url manually.
+```
 
-In case of any queries:
+It would automatically open a browser window with `localhost:3000`. In case it doesn't, you can visit the url manually.
 
-abbasshah493@gmail.com
+### In case of any queries:
+
+`abbasshah493@gmail.com`
