@@ -7,23 +7,23 @@
     width: 50%;
     background: whitesmoke;
 }
-@media(max-width:450px) {
+@media(max-width:480px) {
     .checkinbox-section {
         flex-direction: column;
     }
   }
-  @media(max-width:1025px) {
+  @media(max-width:1050px) {
     .checkinbox-section {
         flex-direction: column;
     }
   }
-  @media(max-width:450px) {
+  @media(max-width:480px) {
     .inbox-form {
        width: 100%;
        height: 50%;
     }
   }
-  @media(max-width:1025px) {
+  @media(max-width:1050px) {
     .inbox-form {
        width: 100%;
        height: 50%;

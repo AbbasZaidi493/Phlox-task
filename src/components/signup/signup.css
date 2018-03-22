@@ -3,12 +3,12 @@
     display: flex;
     flex-direction: row;
 }
-@media(max-width:450px) {
+@media(max-width:480px) {
     .signup-section {
         flex-direction: column;
     }
   }
-  @media(max-width:1025px) {
+  @media(max-width:1050px) {
     .signup-section {
         flex-direction: column;
     }
@@ -17,13 +17,13 @@
     width: 50%;
     background: whitesmoke;
 }
-@media(max-width:450px) {
+@media(max-width:480px) {
     .signup-form {
         width: 100%;
         height: 50%;
     }
   }
-  @media(max-width:1025px) {
+  @media(max-width:1050px) {
     .signup-form {
         width: 100%;
         height: 50%;
@@ -39,7 +39,7 @@
     color: aqua;
 }
 .email-validate {
-    font-size: 12px;
+    font-size: 10px;
     color: red;
 }
 .password-check {
@@ -52,7 +52,7 @@
     margin-left: 260px;
     margin-top: -66px;
 }
-@media(max-width:450px) {
+@media(max-width:480px) {
     .password-check {
         right: 8px;
     }
@@ -61,7 +61,7 @@
     margin-top: 20px;
     font-size: 13px;
 }
-@media(max-width:1025px) {
+@media(max-width:1050px) {
     .password {
         margin-top: 8px;
     }
@@ -70,16 +70,16 @@
     margin-top: 20px;
     font-size: 13px;
 }
-@media(max-width:1025px) {
+@media(max-width:1050px) {
     .email {
         margin-top: 8px;
     }
   }
 .contain {
-    font-size: 12px;
+    font-size: 11px;
     margin-bottom: 10px;
 }
 .checks {
-    font-size: 12px;
+    font-size: 10px;
     color: aqua;
 }

@@ -3,12 +3,12 @@
     display: flex;
     flex-direction: row;
 }
-@media(max-width:450px) {
+@media(max-width:480px) {
     .confirm-section {
         flex-direction: column;
     }
   }
-  @media(max-width:1025px) {
+  @media(max-width:1050px) {
     .confirm-section {
         flex-direction: column;
     }
@@ -17,13 +17,13 @@
     width: 50%;
     background: whitesmoke;
 }
-@media(max-width:450px) {
+@media(max-width:480px) {
     .confirm-form {
        width: 100%;
        height: 50%;
     }
   }
-  @media(max-width:1025px) {
+  @media(max-width:1050px) {
     .confirm-form {
        width: 100%;
        height: 50%;
