@@ -15,7 +15,7 @@
   }
 .signin-form {
     width: 50%;
-    background: aliceblue;
+    background: whitesmoke;
 }
 @media(max-width:450px) {
     .signin-form {
@@ -31,7 +31,7 @@
   }
 .signin-greetings {
     width: 50%;
-    background: blue;
+    background: royalblue;
 }
 @media(max-width:450px) {
     .signin-greetings {
@@ -81,6 +81,13 @@
         
     }
   }
+  @media(max-width:1025px) and (min-width:450px) {
+    .form {
+        margin: 25px auto;
+        margin-left: 230px;
+        
+    }
+  }
 .form-input {
     height: 25px;
     width: 100%;
@@ -93,23 +100,24 @@
 .form-span {
     font-size: 13px;
 }
-.password {
-    margin-top: 20px;
-    font-size: 13px;
-}
 .forgot {
     color: cadetblue;
     font-size: 12px;
-    margin-left: 160px;
+    margin-left: 140px;
     margin-top: 8px;
 }
 .signin-button {
-    background: blue;
+    background: royalblue;
     border: none;
     height: 30px;
     color: white;
     margin-top: 20px;
 }
+@media(max-width:1025px) {
+    .signin-button {
+        margin-top: 8px;
+    }
+  }
 .register-heading {
     margin-top: 14px;
 }
@@ -139,15 +147,14 @@
 }
 .greetings {
     display: grid;
-    margin: 100px auto;
+    margin-top: 100px;
     margin-left: 150px;
     width: 250px;
 }
 @media(max-width:450px) {
     .greetings {
-        margin: 25px auto;
+        margin-top: 25px;
         margin-left: 65px;
-        
     }
   }
   @media(max-width:1025px) and  (min-width:450px) {
@@ -167,13 +174,19 @@
 }
 .eye {
     position: absolute;
-    top: 280px;
+    top: 270px;
     left: 490px;
     color: aqua;
 }
+@media(max-width:1025px) and  (min-width:450px) {
+    .eye {
+        top: 150px;
+        left: 455px;        
+    }
+  }
 @media(max-width:450px) {
     .eye {
-        top: 168px;
+        top: 150px;
         left: 285px;
     }
   }

@@ -5,6 +5,46 @@ import Transition from 'react-motion-ui-pack';
 import './confirm.css';
 
 class Confirm extends Component {
+
+  state = {
+    newPassword: '',
+    confirmPassword: '',
+    checkPassword: null,
+    checkConfirm: null,
+    match: null
+  }
+
+  passwordChange = (e) => {
+    this.setState({newPassword: e.target.value});
+  }
+  confirmChange = (e) => {
+    this.setState({confirmPassword: e.target.value});
+  }
+
+
+  validate = () => {
+    if(this.state.newPassword === '') {
+      this.setState({checkPassword: false});
+    }
+    else {
+     this.setState({checkPassword: true});
+    }
+
+    if(this.state.confirmPassword === '') {
+      this.setState({checkConfirm: false});
+    }
+    else {
+     this.setState({checkConfirm: true});
+    }
+
+    if(this.state.confirmPassword === this.state.newPassword) {
+      this.setState({match: true});
+    }
+    else {
+     this.setState({match: false});
+    }
+
+  }
     
   render() { 
     return (
@@ -28,10 +68,13 @@ class Confirm extends Component {
              </div> 
              <form className="form">
                 <span className="form-span">New password</span>
-                 <input className="form-input" placeholder="abc@gmail.com"  required />
+                 <input className="form-input" onChange={this.passwordChange} placeholder="abc@gmail.com" />
+                 {this.state.checkPassword === false ? <span className="email-validate">please enter new password</span>: ''}
                  <span className="password">Confirm password</span>
-                 <input className="form-input" placeholder="* * * * * *" required/>
-                 <button className="signin-button">Confirm</button>
+                 <input className="form-input"  onChange={this.confirmChange} placeholder="* * * * * *" />
+                 {this.state.checkConfirm === false ? <span className="email-validate">please enter confirm password</span>: ''}
+                 {this.state.match === false ? <span className="email-validate">new password doesn't match with confirm password</span>: ''}
+                 <button className="signin-button"  onClick={this.validate}>Confirm</button>
              </form>
            </div>
            <div className="signin-greetings">

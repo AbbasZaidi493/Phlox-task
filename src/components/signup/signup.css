@@ -15,7 +15,7 @@
   }
 .signup-form {
     width: 50%;
-    background: aliceblue;
+    background: whitesmoke;
 }
 @media(max-width:450px) {
     .signup-form {
@@ -55,6 +55,24 @@
 @media(max-width:450px) {
     .password-check {
         right: 8px;
+    }
+  }
+  .password {
+    margin-top: 20px;
+    font-size: 13px;
+}
+@media(max-width:1025px) {
+    .password {
+        margin-top: 8px;
+    }
+  }
+.email {
+    margin-top: 20px;
+    font-size: 13px;
+}
+@media(max-width:1025px) {
+    .email {
+        margin-top: 8px;
     }
   }
 .contain {

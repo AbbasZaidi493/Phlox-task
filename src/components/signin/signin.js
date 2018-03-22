@@ -4,12 +4,17 @@ import FaArrowRight from 'react-icons/lib/fa/arrow-right';
 import FaEye from 'react-icons/lib/fa/eye';
 import FaEyeSlash from 'react-icons/lib/fa/eye-slash';
 import Transition from 'react-motion-ui-pack';
+import {Row} from 'reactstrap';
 import './signin.css';
 
 class Signin extends Component {
 
   state = {
     type: 'password',
+    email: '',
+    password: '',
+    checkEmail: null,
+    checkPassword: null
   }
 
   showHide = (e) => {
@@ -18,6 +23,28 @@ class Signin extends Component {
     this.setState({
       type: this.state.type === 'input' ? 'password' : 'input'
     })  
+  }
+
+  passwordChange = (e) => {
+    this.setState({password: e.target.value});
+  }
+  emailChange = (e) => {
+    this.setState({email: e.target.value});
+  }
+
+  validateFields = () => {
+    if(this.state.email === '') {
+      this.setState({checkEmail: false});
+    }
+    else {
+      this.setState({checkEmail: true});      
+    }
+    if(this.state.password === '') {
+      this.setState({checkPassword: false});
+    }
+    else {
+      this.setState({checkPassword: true});      
+    }
   }
 
   render() { 
@@ -42,15 +69,17 @@ class Signin extends Component {
              </div> 
              <form className="form">
                  <span className="form-span">Email</span>
-                 <input className="form-input" placeholder="abc@gmail.com" required />
+                 <input className="form-input" onChange={this.emailChange} placeholder="abc@gmail.com" />
+                 {this.state.checkEmail === false ? <span className="email-validate">please enter an email address</span>: ''}
                  <span className="password">Password</span>
-                 <input className="form-input" type={this.state.type} placeholder="* * * * * *" required/>
-                 {this.state.type === 'password'? <FaEye className="eye" onClick={this.showHide} /> :
-                 <FaEyeSlash className="eye" onClick={this.showHide} />}
+                 <input className="form-input" onChange={this.passwordChange} type={this.state.type} placeholder="* * * * * *" />
+                 {this.state.checkPassword === false ? <span className="email-validate">please enter a password</span>: ''}
+                 {this.state.type === 'password'? <FaEye className="eye" style={this.state.checkEmail === false ? {marginTop: '15px'} : {}} onClick={this.showHide} /> :
+                 <FaEyeSlash className="eye" style={this.state.checkEmail === false ? {marginTop: '15px'} : {}} onClick={this.showHide} />}
                  <Link className="link-tag" to='/reset'>
                  <span className="forgot">Forgot password?</span>
                  </Link>
-                 <button className="signin-button">Sign in</button>
+                 <button className="signin-button" onClick={this.validateFields}>Sign in</button>
              </form>
            </div>
            <div className="signin-greetings">

@@ -11,6 +11,10 @@ class Signup extends Component {
 
     state = {
         validateEmail : '',
+        firstName: '',
+        lastName: '',
+        checkFirst: null,
+        checkLast: null,
         lengthCheck: false,
         numberCheck: false,
         capitalCheck: false,
@@ -24,6 +28,19 @@ class Signup extends Component {
     }
     
     validate = () => {
+
+      if(this.state.firstName === '') {
+        this.setState({checkFirst: false})
+      }
+      else {
+        this.setState({checkFirst: true})
+      }
+      if(this.state.lastName === '') {
+        this.setState({checkLast: false})
+      }
+      else {
+        this.setState({checkLast: true})
+      }
 
         var email = this.textInput.value;
       if (this.validateEmail(email)) {
@@ -66,7 +83,14 @@ class Signup extends Component {
         }
         
     }
-    
+    changeFirstName = (e) => {
+      this.setState({firstName: e.target.value});
+    }
+
+    changeLastName = (e) => {
+      this.setState({lastName: e.target.value});
+    }
+
   render() { 
     return (
       <Transition
@@ -91,20 +115,22 @@ class Signup extends Component {
                  <div style={{display: "inline-flex"}}>
                    <div>
                      <span className="form-span">First Name</span>
-                     <input className="name" placeholder="John" required />
+                     <input className="name" onChange={this.changeFirstName} placeholder="John" />
+                     {this.state.checkFirst === false ? <span className="email-validate">please enter first name </span>: ''}
                    </div>
                    <div style={{marginLeft: '10px'}}>
                      <span className="form-span">Last Name</span>
-                     <input className="name" placeholder="Adams" required/>
+                     <input className="name" onChange={this.changeLastName} placeholder="Adams"/>
+                     {this.state.checkLast === false ? <span className="email-validate">please enter Last name </span>: ''}
                    </div>
                  </div>
-                 <span className="form-span" style={{marginTop:'20px'}} >Email</span>
+                 <span className="email"  >Email</span>
                  <input className="form-input" ref={(input) => { this.textInput = input; }}
-                 id="email" placeholder="abc@gmail.com" required/>
+                 id="email" placeholder="abc@gmail.com" />
                  {this.state.validateEmail === false ? <span className="email-validate">please enter a valid email</span>: ''}
                  <span className="password" >Password</span>
                  <div style={{display: 'inline-flex'}}>
-                 <input className="form-input" type="password" onChange={this.validatePassword} ref={(input) => { this.password = input; }} placeholder="* * * * * *" required/>
+                 <input className="form-input" type="password" onChange={this.validatePassword} ref={(input) => { this.password = input; }} placeholder="* * * * * *" />
                  {this.state.passwordChange===true ?<div className="password-check">
                    <span className="contain">Password must contain</span>
                    <div style={{display: "inline-flex"}}>

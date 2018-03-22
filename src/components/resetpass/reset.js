@@ -5,7 +5,24 @@ import Transition from 'react-motion-ui-pack';
 import './reset.css';
 
 class Reset extends Component {
-    
+   state = {
+     email: '',
+     checkEmail: null
+   }
+
+   emailChange = (e) => {
+     this.setState({email: e.target.value});
+   }
+
+   validate = () => {
+     if(this.state.email === '') {
+       this.setState({checkEmail: false});
+     }
+     else {
+      this.setState({checkEmail: true});
+     }
+   }
+
   render() { 
     return (
       <Transition
@@ -29,8 +46,9 @@ class Reset extends Component {
              <form className="form">
                  <p className="reset-para">Please enter email address to begin reseting your password.</p>
                  <span className="form-span">Email</span>
-                 <input className="form-input" placeholder="abc@gmail.com" required/>
-                 <button className="signin-button" >Send reset email</button>
+                 <input className="form-input" onChange={this.emailChange} placeholder="abc@gmail.com" />
+                 {this.state.checkEmail === false ? <span className="email-validate">please enter an email address</span>: ''}
+                 <button className="signin-button" onClick={this.validate}>Send reset email</button>
              </form>
            </div>
            <div className="signin-greetings">

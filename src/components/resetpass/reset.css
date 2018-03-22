@@ -15,7 +15,7 @@
   }
 .reset-form {
     width: 50%;
-    background: aliceblue;
+    background: whitesmoke;
 }
 @media(max-width:450px) {
     .reset-form {
