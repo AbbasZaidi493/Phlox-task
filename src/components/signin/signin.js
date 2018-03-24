@@ -4,7 +4,7 @@ import FaArrowRight from 'react-icons/lib/fa/arrow-right';
 import FaEye from 'react-icons/lib/fa/eye';
 import FaEyeSlash from 'react-icons/lib/fa/eye-slash';
 import Transition from 'react-motion-ui-pack';
-import {Row} from 'reactstrap';
+import {Form, FormGroup, Label, Input } from 'reactstrap';
 import './signin.css';
 
 class Signin extends Component {
@@ -67,20 +67,24 @@ class Signin extends Component {
                <img className="logo" src={require('../../images/logo.jpg')} alt="logo"/>
                <span className="logo-span">cointec</span>
              </div> 
-             <form className="form">
-                 <span className="form-span">Email</span>
-                 <input className="form-input" onChange={this.emailChange} placeholder="abc@gmail.com" />
-                 {this.state.checkEmail === false ? <span className="email-validate">please enter an email address</span>: ''}
-                 <span className="password">Password</span>
-                 <input className="form-input" onChange={this.passwordChange} type={this.state.type} placeholder="* * * * * *" />
+              <Form className="form">
+                <FormGroup style={{marginBottom: '0px'}}>
+                 <Label className="form-span" for="exampleEmail">Email</Label>
+                 <Input className="form-input"  onChange={this.emailChange} type="email" name="email" id="exampleEmail" placeholder="abc@gmail.com" />
+                 {this.state.checkEmail === false ? <span className="email-validate">please enter an email address</span>: ''} 
+                </FormGroup>
+                <FormGroup style={{marginBottom: '0px'}}>
+                 <Label className="password" for="examplePassword">Password</Label>
+                 <Input className="form-input" onChange={this.passwordChange} type={this.state.type} name="password" id="examplePassword" placeholder="password placeholder" />
                  {this.state.checkPassword === false ? <span className="email-validate">please enter a password</span>: ''}
-                 {this.state.type === 'password'? <FaEye className="eye" style={this.state.checkEmail === false ? {marginTop: '15px'} : {}} onClick={this.showHide} /> :
-                 <FaEyeSlash className="eye" style={this.state.checkEmail === false ? {marginTop: '15px'} : {}} onClick={this.showHide} />}
+                 {this.state.type === 'password'? <FaEye className="eye" style={this.state.checkEmail === false ? {marginTop: '22px'} : {}} onClick={this.showHide} /> :
+                 <FaEyeSlash className="eye" style={this.state.checkEmail === false ? {marginTop: '22px'} : {}} onClick={this.showHide} />}
                  <Link className="link-tag" to='/reset'>
                  <span className="forgot">Forgot password?</span>
                  </Link>
-                 <button className="signin-button" onClick={this.validateFields}>Sign in</button>
-             </form>
+                </FormGroup>
+                <button className="signin-button" onClick={this.validateFields}>Sign in</button>
+                </Form>
            </div>
            <div className="signin-greetings">
              <div className="register-heading">
